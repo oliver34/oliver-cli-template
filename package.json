@@ -1,0 +1,34 @@
+{
+  "name": "oliver-cli-template",
+  "version": "1.0.0",
+  "description": "react cli template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliver34Team/oliver-cli-template.git"
+  },
+  "keywords": [
+    "template"
+  ],
+  "author": "oliver34",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oliver34Team/oliver-cli-template/issues"
+  },
+  "homepage": "https://github.com/oliver34Team/oliver-cli-template#readme",
+  "devDependencies": {
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "awesome-typescript-loader": "^5.2.1",
+    "install": "^0.13.0",
+    "npm": "^6.14.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
