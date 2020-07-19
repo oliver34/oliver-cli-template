@@ -1,11 +1,13 @@
 const path = require('path');
 
+const plugins = require('./plugins');
+
 const conf = {
   entry: {
-    app: path.join(__dirname, '../../', 'src/index.tsx'),
+    app: path.join(__dirname, '../', 'src/index.tsx'),
   },
   output: {
-    path: path.join(__dirname, '../../', 'dist'),
+    path: path.join(__dirname, '../', 'dist'),
     filename: '[name].js',
   },
   module: {
@@ -14,16 +16,22 @@ const conf = {
         test: /\.ts(x?)$/,
         use: [
           {
-            loader: 'awsome-typescript-loader',
+            loader: 'awesome-typescript-loader',
             options: {},
           },
         ],
       },
+      {
+        test: /\.scss$/,
+        include: [path.join(__dirname, '../', 'src')],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
     ],
   },
   resolve: {
-    extension: ['.ts', '.tsx', '.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
+  plugins,
 };
 
 module.exports = conf;
